@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Youtube Downloader</title>
+    <!-- CSS only -->
+
+    <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- JavaScript Bundle with Popper -->
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blob-polyfill/7.0.20220408/Blob.min.js" integrity="sha512-uPm9nh4/QF6a7Mz4Srk0lXfN7T+PhKls/NhWUKpXUbu3xeG4bXhtbw2NCye0BRXopnD0x+SBDMOWXOlHAwqgLw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" type="text/css"  href="../static/Style.css">
+<script src = "../static/script.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+</head>
+<body>
+ 
+
+<!-- Just an image -->
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+           
+            <form id="regForm" onkeydown="return event.key != 'Enter';">
+                <div>
+                  <!-- <div class="d-flex justify-content-center">
+                    <span>something</span><br><span>right</span>
+                   </div> -->
+                  <img src="../static/youtube logo.jpg" id="logo">
+                </div>
+                
+                <h1 id="register">YouTube Downloader</h1>
+                <div class="all-steps" id="all-steps"> 
+                  <span class="step"><i class="fa fa-user"></i></span> 
+                  <span class="step"><i class="fa fa-map-marker"></i></span>
+                  <span class="step"><i class="fa fa-shopping-bag"></i></span>
+                  <span class="step"><i class="fa fa-car"></i></span>
+                  <span class="step"><i class="fa fa-spotify"></i></span>
+                  <span class="step"><i class="fa fa-mobile-phone"></i></span>
+                </div>
+                <!-- <div class="text-center" id="load">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div> -->
+                <div class="tabk">
+                  <h6>Paste The Link Here...</h6>
+                    <p>
+                      <input id="videoUrl" placeholder="Place the youtube Link..."  autocomplete="off" name="fname" required="required"></p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <img src="../static/loader final.gif" alt="Loading..." id="loader">
+                </div>
+
+                <div style="overflow:auto;" id="nextprevious">
+                    <div style="float:right;">
+                      <button type="button" id="nextBtn" onclick="showVideo()"><i class="fa fa-angle-double-right"></i></button> </div>                    
+                </div><br>
+                <div id = "all_middle_div">
+                  <div class="d-flex justify-content-center">
+                    <!-- <iframe id="myFrame" width="500" height="300" alt="You can download the shorts video">
+                    </iframe></div><br> -->
+                    <img src="" id ="thumbnail" alt="You can download the video" width="500" height="300"></div><br><h4 id="titletext" class="d-flex justify-content-center">Title Of Video</h4>
+                    
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="text-weight"><b>Select Video Format :</b></label>
+                          <select class="form-control formte" required id="format">
+                            <option selected disabled>Select Video Format</option> 
+                            <!-- <option value=17>144p Mp4</option>
+                            <option value=18>360p Mp4</option>
+                            <option value=35>480p Mp4</option>
+                            <option value=22>720p Mp4</option>
+                            <option value=137>1080p Mp4</option>
+                            <option value=138>2160p Mp4</option> -->
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- https://blog.avada.io/css/download-buttons -->
+                      <div class="d-flex justify-content-end">
+                        <button  type="button" id="downloadbtn"onclick="download()" style=" background-color: #6A1B9A" class="btn btn-primary" formtarget="_parent">Download</button>
+                      </div>
+                  </div>
+                </div>
+                </form>
+              
+        </div>
+    </div>
+</div>
+
+  
+    
+</body>
+</html>
